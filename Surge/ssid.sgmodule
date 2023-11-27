@@ -1,8 +1,0 @@
-#!name=SSID 模块
-#!desc=根据网络切换状态
-
-[SSID Setting]
-"MediaStorm - 2.4G" suspend=true
-"MediaStorm - 5G" suspend=true
-"MediaStorm - Studio" suspend=true
-"OpenWrt - 5G" suspend=true
