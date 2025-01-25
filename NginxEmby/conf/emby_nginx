@@ -1,0 +1,18 @@
+server {
+    listen 8096;  # 启用 8096 端口
+    server_name xx.xx.xx.xx;  # VPS 的 IP 或域名
+
+    location / {
+        proxy_pass "域名/IP";  # 如果 NAS 使用 HTTPS
+        proxy_set_header Host "域名/IP";
+        proxy_set_header X-Real-IP $remote_addr;  # 传递客户端真实 IP
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+
+        # 禁用 SSL 证书验证
+        proxy_ssl_server_name on;  # 启用 SNI 支持
+        proxy_ssl_verify off;      # 禁用 SSL 验证
+    }
+
+    resolver 8.8.8.8 valid=10s;  # 动态解析域名
+}
