@@ -28,9 +28,9 @@
 - HOK.list 单独使用。
 
 #### 规则链接
-**MASTER分支 (每日更新)**
+**MASTER分支**
 
-https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Game/TencentLoLMobile/TencentLoLMobile.list
+https://raw.githubusercontent.com/PANGPANGDigital/GoodGoodStudyDayDayUp/main/Surge/Rule/HOK/HOK.list
 
 
 ## 子规则/排除规则
