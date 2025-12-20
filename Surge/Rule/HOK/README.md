@@ -1,4 +1,4 @@
-# 🧸 王者荣耀国际服（Honor of Kings）
+# 🎮 王者荣耀国际服（Honor of Kings）
 
 ## 前言
 
