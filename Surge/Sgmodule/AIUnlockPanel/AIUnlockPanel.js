@@ -6,7 +6,10 @@
  * Region rules last reviewed: 2026-07.
  */
 
-var TRACE_URL = "https://www.cloudflare.com/cdn-cgi/trace";
+// Use the ChatGPT host rather than a generic Cloudflare host. In Surge, a
+// domain rule can send the two hosts through different policies, which would
+// make a generic trace report the wrong egress country for ChatGPT.
+var TRACE_URL = "https://chatgpt.com/cdn-cgi/trace";
 
 var CHATGPT = setOf(
   "AF AL DZ AD AO AG AR AM AU AT AZ BS BH BD BB BE BZ BJ BT BO BA BW BR BN BG BF BI CV KH CM CA CF TD CL CO KM CG CD CR HR CY CZ DK DJ DM DO EC EG SV GQ ER EE SZ ET FJ FI FR GA GM GE DE GH GR GD GT GN GW GY HT HN HU IS IN ID IQ IE IL IT JM JP JO KZ KE KI KW KG LA LV LB LS LR LY LI LT LU MG MW MY MV ML MT MH MR MU MX FM MD MC MN ME MA MZ MM NA NR NP NL NZ NI NE NG MK NO OM PK PW PA PG PY PE PH PL PT QA RO RW KN LC VC WS SM ST SA SN RS SC SL SG SK SI SB ZA KR ES LK SR SD CH TW TJ TZ TH TL TG TO TT TN TR TM TV UG AE GB US UY UZ VU VA VE VN YE ZM ZW"
