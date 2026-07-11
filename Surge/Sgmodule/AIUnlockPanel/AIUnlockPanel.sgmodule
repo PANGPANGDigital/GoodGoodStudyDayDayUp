@@ -1,0 +1,9 @@
+#!name=AI 服务解锁检测
+#!desc=检测出口地区对 ChatGPT、Gemini、Claude 等 AI 服务的通常可用性
+#!author=PANGPANGDigital
+
+[Panel]
+AIUnlockPanel = title="AI 服务解锁",content="点击卡片开始检测",style=info,script-name=AIUnlockScript,update-interval=3600
+
+[Script]
+AIUnlockScript = type=generic,timeout=10,script-path=https://raw.githubusercontent.com/PANGPANGDigital/GoodGoodStudyDayDayUp/main/Surge/Sgmodule/AIUnlock/AIUnlockPanel.js,script-update-interval=86400
