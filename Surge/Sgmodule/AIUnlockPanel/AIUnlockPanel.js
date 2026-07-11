@@ -115,10 +115,10 @@ function flag(country) {
 
 function padServiceName(name) {
   var padding = {
-    "ChatGPT": 1,
+    "ChatGPT": 1.5,
     "Gemini": 3,
     "Claude": 3,
-    "Grok": 4
+    "Grok": 4.5
   };
   return name + new Array((padding[name] || 0) + 1).join("\u2007");
 }
