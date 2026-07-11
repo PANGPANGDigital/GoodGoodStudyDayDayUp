@@ -63,11 +63,11 @@ function findRequest(requests, marker) {
 function finish(service, country) {
   country = String(country || "").toUpperCase();
   if (!/^[A-Z]{2}$/.test(country) || country === "XX" || country === "T1") {
-    results.push({ name: service.name, value: "❓", state: "unknown" });
+    results.push({ name: service.name, region: "未知", state: "unknown" });
   } else if (!service.supported(country)) {
-    results.push({ name: service.name, value: "❌", state: "blocked" });
+    results.push({ name: service.name, region: "未解锁", state: "blocked" });
   } else {
-    results.push({ name: service.name, value: flag(country), state: "ok" });
+    results.push({ name: service.name, region: flag(country) + " " + country, state: "ok" });
   }
 
   pending -= 1;
@@ -81,7 +81,7 @@ function finish(service, country) {
   // these six names to the visual width of “Perplexity”, aligning the result
   // column while retaining the full service names.
   var lines = ordered.map(function (item) {
-    return padServiceName(item.name) + " ·  " + item.value;
+    return padServiceName(item.name) + "  " + stateEmoji(item.state) + "  区域：" + item.region;
   });
   var allOk = ordered.every(function (item) { return item.state === "ok"; });
   $done({
@@ -121,4 +121,10 @@ function padServiceName(name) {
     "Grok": 5
   };
   return name + new Array((padding[name] || 0) + 1).join("\u2007");
+}
+
+function stateEmoji(state) {
+  if (state === "ok") return "✅";
+  if (state === "blocked") return "❌";
+  return "❓";
 }
