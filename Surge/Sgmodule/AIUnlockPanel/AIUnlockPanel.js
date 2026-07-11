@@ -119,11 +119,11 @@ function flag(country) {
 
 function padServiceName(name) {
   var padding = {
-    "ChatGPT": 2,
+    "ChatGPT": 4,
     "Gemini": 3,
     "Claude": 3,
-    "Copilot": 3,
-    "Perplexity": 0,
+    "Copilot": 2,
+    "Perplexity": 3,
     "Grok": 5
   };
   return name + new Array((padding[name] || 0) + 1).join("\u2007");
