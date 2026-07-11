@@ -1,12 +1,11 @@
 #!name=AI Unlock Panel
 #!desc=按出口地区检测 ChatGPT、Gemini、Claude 等 AI 服务的通常可用性
 #!author=Codex
-#!arguments=title=AI%20Unlock&services=chatgpt,gemini,claude,copilot,perplexity,grok&icon=brain.head.profile&iconcolor=%237C3AED&iconerr=xmark.seal.fill&iconerrcolor=%23D65C51
-
 # 远程脚本托管于 GitHub；安装此模块后会自动从该地址更新脚本。
+# 如需自定义服务或图标，请编辑下方 argument 参数；详情见 README。
 
 [Panel]
-AI Unlock = script-name=AIUnlock,update-interval=-1
+AIUnlock = title="AI Unlock",content="点击刷新以检测出口地区的 AI 服务可用性",script-name=AIUnlock,update-interval=3600
 
 [Script]
-AIUnlock = type=generic,timeout=8,script-path=https://raw.githubusercontent.com/PANGPANGDigital/GoodGoodStudyDayDayUp/refs/heads/main/Surge/Sgmodule/AIUnlock/AIUnlockPanel.js,script-update-interval=86400,argument=title=%title%&services=%services%&icon=%icon%&icon-color=%iconcolor%&iconerr=%iconerr%&iconerr-color=%iconerrcolor%
+AIUnlock = type=generic,timeout=8,script-path=https://raw.githubusercontent.com/PANGPANGDigital/GoodGoodStudyDayDayUp/main/Surge/Sgmodule/AIUnlock/AIUnlockPanel.js,script-update-interval=86400,argument=title=AI%20Unlock&services=chatgpt,gemini,claude,copilot,perplexity,grok&icon=brain.head.profile&icon-color=%237C3AED&iconerr=xmark.seal.fill&iconerr-color=%23D65C51
