@@ -1,0 +1,13 @@
+#!name=AI Unlock Panel
+#!desc=按出口地区检测 ChatGPT、Gemini、Claude 等 AI 服务的通常可用性
+#!author=Codex
+#!arguments=title=AI%20Unlock&services=chatgpt,gemini,claude,copilot,perplexity,grok&icon=brain.head.profile&iconcolor=%237C3AED&iconerr=xmark.seal.fill&iconerrcolor=%23D65C51
+
+# 将本文件和 AIUnlockPanel.js 放在 Surge 配置目录的同一层级。
+# 如需远程安装，将下方 script-path 改成该 JS 文件的 HTTPS Raw URL。
+
+[Panel]
+AI Unlock = script-name=AIUnlock,update-interval=-1
+
+[Script]
+AIUnlock = type=generic,timeout=8,script-path=AIUnlockPanel.js,argument=title=%title%&services=%services%&icon=%icon%&icon-color=%iconcolor%&iconerr=%iconerr%&iconerr-color=%iconerrcolor%
