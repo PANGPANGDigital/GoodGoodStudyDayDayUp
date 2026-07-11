@@ -7,7 +7,7 @@
 在 Surge 中通过下列地址安装模块：
 
 ```text
-https://raw.githubusercontent.com/PANGPANGDigital/GoodGoodStudyDayDayUp/main/Surge/Sgmodule/AIUnlock/AIUnlockPanel.sgmodule
+https://raw.githubusercontent.com/PANGPANGDigital/ProxyToolkit/refs/heads/main/Surge/Sgmodule/AIUnlockPanel/AIUnlockPanel.sgmodule
 ```
 
 启用后，在 Surge 的**策略组 / Policy Selection**页面会先显示“AI 服务解锁 / 点击卡片开始检测”。点击卡片即可刷新。面板每小时会自动更新一次。
