@@ -1,6 +1,6 @@
 # AI 服务解锁检测（Surge）
 
-一个 Surge 面板，分别检测 ChatGPT、Gemini、Claude、Copilot、Perplexity 与 Grok 实际命中的 Surge 策略及出口地区。
+一个 Surge 面板，分别检测 ChatGPT、Gemini、Claude 与 Grok 实际命中的 Surge 策略及出口地区。
 
 ## 安装
 
