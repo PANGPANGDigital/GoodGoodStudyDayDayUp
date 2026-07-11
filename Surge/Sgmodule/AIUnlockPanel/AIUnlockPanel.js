@@ -13,15 +13,11 @@ var MARKER_PREFIX = "ai-unlock-panel-" + Date.now() + "-";
 var CHATGPT = setOf("AF AL DZ AD AO AG AR AM AU AT AZ BS BH BD BB BE BZ BJ BT BO BA BW BR BN BG BF BI CV KH CM CA CF TD CL CO KM CG CD CR HR CY CZ DK DJ DM DO EC EG SV GQ ER EE SZ ET FJ FI FR GA GM GE DE GH GR GD GT GN GW GY HT HN HU IS IN ID IQ IE IL IT JM JP JO KZ KE KI KW KG LA LV LB LS LR LY LI LT LU MG MW MY MV ML MT MH MR MU MX FM MD MC MN ME MA MZ MM NA NR NP NL NZ NI NE NG MK NO OM PK PW PA PG PY PE PH PL PT QA RO RW KN LC VC WS SM ST SA SN RS SC SL SG SK SI SB ZA KR ES LK SR SD CH TW TJ TZ TH TL TG TO TT TN TR TM TV UG AE GB US UY UZ VU VA VE VN YE ZM ZW");
 var CLAUDE = setOf("AL DZ AD AO AG AR AM AU AT AZ BS BH BD BB BE BZ BJ BT BO BA BW BR BN BG BF BI CV KH CM CA TD CL CO KM CG CD CR HR CY CZ DK DJ DM DO EC EG SV GQ EE SZ FJ FI FR GA GM GE DE GH GR GD GT GN GW GY HT HN HU IS IN ID IQ IE IL IT JM JP JO KZ KE KI KW KG LA LV LB LS LR LI LT LU MG MW MY MV ML MT MH MR MU MX FM MD MC MN ME MA MZ NA NR NP NL NZ NE NG MK NO OM PK PW PA PG PY PE PH PL PT QA RO RW KN LC VC WS SM ST SA SN RS SC SL SG SK SI SB ZA KR ES LK SR CH TW TJ TZ TH TL TG TO TT TN TR TM TV UG AE GB US UY UZ VU VA VN ZM ZW");
 var GEMINI_BLOCKED = setOf("CN CU IR KP SY");
-var BROAD_BLOCKED = setOf("CN CU IR KP SY");
-
 var SERVICES = [
   { name: "ChatGPT", probe: "https://chatgpt.com/cdn-cgi/trace", supported: function (country) { return !!CHATGPT[country]; }, trace: true },
   { name: "Gemini", probe: "https://gemini.google.com/favicon.ico", supported: function (country) { return !GEMINI_BLOCKED[country]; } },
   { name: "Claude", probe: "https://claude.ai/favicon.ico", supported: function (country) { return !!CLAUDE[country]; } },
-  { name: "Copilot", probe: "https://copilot.microsoft.com/favicon.ico", supported: function (country) { return !BROAD_BLOCKED[country]; } },
-  { name: "Perplexity", probe: "https://www.perplexity.ai/favicon.ico", supported: function (country) { return !BROAD_BLOCKED[country]; } },
-  { name: "Grok", probe: "https://grok.com/favicon.ico", supported: function (country) { return !BROAD_BLOCKED[country]; } }
+  { name: "Grok", probe: "https://grok.com/favicon.ico", supported: function (country) { return !GEMINI_BLOCKED[country]; } }
 ];
 
 var results = [];
@@ -71,7 +67,7 @@ function finish(service, country) {
   } else if (!service.supported(country)) {
     results.push({ name: service.name, value: "❌", state: "blocked" });
   } else {
-    results.push({ name: service.name, value: flag(country) + " " + country, state: "ok" });
+    results.push({ name: service.name, value: flag(country), state: "ok" });
   }
 
   pending -= 1;
@@ -122,8 +118,6 @@ function padServiceName(name) {
     "ChatGPT": 4,
     "Gemini": 3,
     "Claude": 3,
-    "Copilot": 2,
-    "Perplexity": 3,
     "Grok": 5
   };
   return name + new Array((padding[name] || 0) + 1).join("\u2007");
