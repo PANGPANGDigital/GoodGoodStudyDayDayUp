@@ -1,3 +1,3 @@
-# GoodGoodStudyDayDayUp
+# ProxyToolkit
 
-**好好学习  天天向上**
+**本项目完全基于AI编写**
