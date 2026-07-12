@@ -116,12 +116,14 @@ function flag(country) {
 
 function padServiceName(name) {
   var padding = {
-    "ChatGPT": 2,
+    "ChatGPT": 1,
     "Gemini": 3,
     "Claude": 3,
-    "Grok": 5
+    "Grok": 4
   };
-  return name + new Array((padding[name] || 0) + 1).join("\u2007");
+  // U+2005 is a four-per-em space; it provides a fractional visual offset.
+  var fractionalPadding = (name === "ChatGPT" || name === "Grok") ? "\u2005" : "";
+  return name + new Array((padding[name] || 0) + 1).join("\u2007") + fractionalPadding;
 }
 
 function stateEmoji(state) {
