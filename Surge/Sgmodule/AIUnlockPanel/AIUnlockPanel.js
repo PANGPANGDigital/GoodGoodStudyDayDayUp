@@ -86,8 +86,9 @@ function finish(service, country) {
   var allOk = ordered.every(function (item) { return item.state === "ok"; });
   $done({
     title: "AI 解锁地区",
-    // Leave one blank line between services so the panel is easier to scan.
-    content: lines.join("\n\n"),
+    // Surge panels support whole text lines only; use a compact single-line
+    // break rather than an entire blank line between services.
+    content: lines.join("\n"),
     icon: allOk ? "checkmark.seal.fill" : "exclamationmark.triangle.fill",
     "icon-color": allOk ? "#22A06B" : "#D65C51"
   });
@@ -122,7 +123,7 @@ function padServiceName(name) {
     "Grok": 4
   };
   // U+2005 is a four-per-em space; it provides a fractional visual offset.
-  var fractionalPadding = (name === "ChatGPT" || name === "Grok") ? "\u2005" : "";
+  var fractionalPadding = (name === "ChatGPT" || name === "Grok") ? "\u2005\u2005" : "";
   return name + new Array((padding[name] || 0) + 1).join("\u2007") + fractionalPadding;
 }
 
