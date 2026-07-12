@@ -81,7 +81,7 @@ function finish(service, country) {
   // these six names to the visual width of “Perplexity”, aligning the result
   // column while retaining the full service names.
   var lines = ordered.map(function (item) {
-    return padServiceName(item.name) + "  " + stateEmoji(item.state) + "  区域：" + item.region;
+    return padServiceName(item.name) + "  区域：" + item.region;
   });
   var allOk = ordered.every(function (item) { return item.state === "ok"; });
   $done({
@@ -124,10 +124,4 @@ function padServiceName(name) {
   // U+2005 is a four-per-em space; it provides a fractional visual offset.
   var fractionalPadding = (name === "ChatGPT" || name === "Grok") ? "\u2005" : "";
   return name + new Array((padding[name] || 0) + 1).join("\u2007") + fractionalPadding;
-}
-
-function stateEmoji(state) {
-  if (state === "ok") return "✅";
-  if (state === "blocked") return "❌";
-  return "❓";
 }
