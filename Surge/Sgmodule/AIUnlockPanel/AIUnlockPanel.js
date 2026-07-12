@@ -86,7 +86,8 @@ function finish(service, country) {
   var allOk = ordered.every(function (item) { return item.state === "ok"; });
   $done({
     title: "AI 解锁地区",
-    content: lines.join("\n"),
+    // Leave one blank line between services so the panel is easier to scan.
+    content: lines.join("\n\n"),
     icon: allOk ? "checkmark.seal.fill" : "exclamationmark.triangle.fill",
     "icon-color": allOk ? "#22A06B" : "#D65C51"
   });
