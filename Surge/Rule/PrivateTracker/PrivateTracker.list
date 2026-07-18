@@ -1,7 +1,7 @@
 # NAME: PrivateTracker
 # AUTHOR: PANGPANGDigital
 # REPO: https://github.com/PANGPANGDigital/ProxyToolkit/tree/main/Surge/Rule
-# UPDATED: 2026-08-18 15:00:00
+# UPDATED: 2026-07-18 15:00:00
 # DOMAIN-SUFFIX: 12
 # TOTAL: 12
 DOMAIN-SUFFIX,audiences.me
