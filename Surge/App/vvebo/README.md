@@ -1,1 +1,1 @@
-使用链接：https://github.com/PANGPANGDigital/GoodGoodStudyDayDayUp/raw/main/Surge/vvebo/VVebo.snippet
+使用链接：https://raw.githubusercontent.com/PANGPANGDigital/ProxyToolkit/main/Surge/App/vvebo/VVebo.snippet
