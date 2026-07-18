@@ -18,9 +18,7 @@ RULE-SET,https://raw.githubusercontent.com/PANGPANGDigital/ProxyToolkit/main/Sur
 
 ## 维护说明
 
-- 规则作者：PANGPANGDigital
-- 项目地址：<https://github.com/PANGPANGDigital/ProxyToolkit/tree/main/Surge/Rule>
-- 规则文件头标注更新时间：2026-08-18 15:00:00
+- 个人自用版
 
 如遇站点更换域名、增加新域名或出现误匹配，请在项目仓库提交 Issue 或 Pull Request，并附上可核验的域名信息。
 
