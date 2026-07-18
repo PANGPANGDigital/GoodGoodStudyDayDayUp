@@ -11,7 +11,7 @@
 将规则文件作为远程规则集（Rule Set）添加到 Surge 配置中，并为它指定一个合适的策略组。
 
 ```ini
-RULE-SET,https://raw.githubusercontent.com/PANGPANGDigital/ProxyToolkit/main/Surge/Rule/PrivateTracker.list
+RULE-SET,https://raw.githubusercontent.com/PANGPANGDigital/ProxyToolkit/main/Surge/Rule/PrivateTracker/PrivateTracker.list
 ```
 
 
