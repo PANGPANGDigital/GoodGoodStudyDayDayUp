@@ -1,0 +1,18 @@
+# NAME: PrivateTracker
+# AUTHOR: PANGPANGDigital
+# REPO: https://github.com/PANGPANGDigital/ProxyToolkit/tree/main/Surge/Rule
+# UPDATED: 2026-08-18 15:00:00
+# DOMAIN-SUFFIX: 12
+# TOTAL: 12
+DOMAIN-SUFFIX,audiences.me
+DOMAIN-SUFFIX,m-team.cc
+DOMAIN-SUFFIX,hdhome.org
+DOMAIN-SUFFIX,hdarea.club
+DOMAIN-SUFFIX,pterclub.net
+DOMAIN-SUFFIX,hddolby.com
+DOMAIN-SUFFIX,ourbits.club
+DOMAIN-SUFFIX,keepfrds.com
+DOMAIN-SUFFIX,hhanclub.net
+DOMAIN-SUFFIX,springsunday.net
+DOMAIN-SUFFIX,totheglory.im
+DOMAIN-SUFFIX,agsvpt.com
