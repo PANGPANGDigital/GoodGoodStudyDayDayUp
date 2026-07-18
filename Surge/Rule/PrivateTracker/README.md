@@ -4,24 +4,7 @@
 
 > 规则仅用于网络分流与连接管理；请遵守所在地法律、Tracker 站点规则及其邀请与账号使用规范。
 
-## 收录范围
 
-当前规则共收录 **12** 个域名：
-
-| 域名 |
-| --- |
-| `audiences.me` |
-| `m-team.cc` |
-| `hdhome.org` |
-| `hdarea.club` |
-| `pterclub.net` |
-| `hddolby.com` |
-| `ourbits.club` |
-| `keepfrds.com` |
-| `hhanclub.net` |
-| `springsunday.net` |
-| `totheglory.im` |
-| `agsvpt.com` |
 
 ## 使用方法
 
@@ -29,32 +12,9 @@
 
 ```ini
 [Rule]
-RULE-SET,https://raw.githubusercontent.com/PANGPANGDigital/ProxyToolkit/main/Surge/Rule/PrivateTracker.list,PT-DIRECT
+RULE-SET,https://raw.githubusercontent.com/PANGPANGDigital/ProxyToolkit/main/Surge/Rule/PrivateTracker.list
 ```
 
-其中：
-
-- 将 `PT-DIRECT` 替换为你自己的策略组名称，例如 `DIRECT`、`Proxy` 或 `PT`。
-- 请把这条规则放在会产生冲突的通用规则之前，例如 `GEOIP`、`FINAL`、`MATCH`，以保证优先命中。
-- 如果你的 Surge 版本或仓库分支不同，请以实际规则文件地址为准。
-
-若你使用本地规则，也可以将 `PrivateTracker.list` 的内容直接合并到 `[Rule]` 段，并在每条规则末尾补上策略名称，例如：
-
-```ini
-[Rule]
-DOMAIN-SUFFIX,m-team.cc,PT-DIRECT
-DOMAIN-SUFFIX,ourbits.club,PT-DIRECT
-```
-
-## 匹配逻辑
-
-规则采用 `DOMAIN-SUFFIX` 类型，因此会同时匹配根域名及其子域名。例如：
-
-```text
-DOMAIN-SUFFIX,m-team.cc
-```
-
-可匹配 `m-team.cc`、`www.m-team.cc` 等以该域名结尾的请求。
 
 ## 维护说明
 
