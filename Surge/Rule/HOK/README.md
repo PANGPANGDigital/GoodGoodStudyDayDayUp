@@ -30,7 +30,7 @@
 #### 规则链接
 **MASTER分支**
 
-https://raw.githubusercontent.com/PANGPANGDigital/GoodGoodStudyDayDayUp/main/Surge/Rule/HOK/HOK.list
+https://raw.githubusercontent.com/PANGPANGDigital/ProxyToolkit/refs/heads/main/Surge/Rule/HOK/HOK.list
 
 
 ## 子规则/排除规则
