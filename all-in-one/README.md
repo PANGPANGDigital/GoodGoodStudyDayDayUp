@@ -54,9 +54,9 @@
 ## 🚀 快速开始
 
 ### 一键安装服务端
-https://gitlab.com/chil30-group/vless-all-in-one/-/raw/main/vless-server.sh
+https://raw.githubusercontent.com/PANGPANGDigital/ProxyToolkit/main/all-in-one/vless-server.sh
 ```bash
-wget -O vless-server.sh https://gitlab.com/chil30-group/vless-all-in-one/-/raw/main/vless-server.sh && chmod +x vless-server.sh && ./vless-server.sh
+wget -O vless-server.sh https://raw.githubusercontent.com/PANGPANGDigital/ProxyToolkit/main/all-in-one/vless-server.sh && chmod +x vless-server.sh && ./vless-server.sh
 ```
 
 ### 服务端安装
