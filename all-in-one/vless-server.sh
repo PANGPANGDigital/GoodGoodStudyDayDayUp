@@ -14,7 +14,7 @@
 #  
 #  
 #  作者: Zyx0rx
-#  项目地址: https://github.com/mozisen
+#  项目地址: https://github.com/Zyx0rx/vless-all-in-one
 #  作者地址:https://docs.vaiox.de/
 #═══════════════════════════════════════════════════════════════════════════════
 
