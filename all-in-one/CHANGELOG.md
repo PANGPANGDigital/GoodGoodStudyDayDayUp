@@ -9,7 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 **Fixed**
 
-- 修复 Snell v5 安装异常问题
+- 修复 Snell v5 安装异常问题(@mozisen)
 
 ## [3.4.9] - 2026-02-12
 
